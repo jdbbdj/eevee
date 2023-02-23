@@ -1,5 +1,5 @@
 import express, { Application } from "express";
-import commentRouter from "./routes/sample";
+import commentRouter from "./routes/comments/index";
 const app: Application = express();
 app.use(express.json());
 app.use("/comments", commentRouter);
