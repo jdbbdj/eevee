@@ -1,4 +1,4 @@
-class Node {
+export class Node {
   //this could be stated inside the LinkedList
   //but we need to seperate it to avoid calling the this.value and this.next most of the time
   //only like this const newNode = new Node(4)
@@ -59,7 +59,7 @@ export default class LinkedList {
     //}
     //}
     this.tail = this.head;
-    //copy the head but it will point
+    //copy the head but it will pointer
     //{tail:
     //{
     //value:value,
@@ -69,6 +69,24 @@ export default class LinkedList {
     this.length = 1;
   }
 
+  //adding in the linkedlist
+  //create a new Node
+  //last node in the list point to new node
+  //the tail should point also to the new node
+  //edge case linkedlist that has no node
+  //both heads and tails should point to it
+  push(value) {
+    const newNode = new Node(value);
+    if (!this.head) {
+      this.head = newNode;
+      this.tail = newNode;
+    } else {
+      this.tail.next = newNode;
+      this.tail = newNode;
+    }
+    this.length++;
+    return this;
+  }
   ///END
   addingInEndLinkedList = () => {
     //in adding on the last item in a linkedlist on tail the value will always seek for the next with null

@@ -1,7 +1,9 @@
 import express, { Request, Response, NextFunction, Router } from "express";
-import { instantiate } from "../../controllers/LinkedListController";
+import { instantiate, push } from "../../controllers/LinkedListController";
 const router: Router = express.Router();
 
-router.get("/:num", instantiate);
+router.get("/", instantiate);
+
+router.get("/push/", push);
 
 export default router;
