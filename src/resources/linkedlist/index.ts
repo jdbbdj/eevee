@@ -75,18 +75,70 @@ export default class LinkedList {
   //the tail should point also to the new node
   //edge case linkedlist that has no node
   //both heads and tails should point to it
-  push(value) {
+  push = (value) => {
     const newNode = new Node(value);
-    if (!this.head) {
+    if (!this.head /*edge case*/) {
       this.head = newNode;
       this.tail = newNode;
+      console.log("HERE");
     } else {
+      //this changes the this.head.next for it is also its pointer
+      //pointers are not the same file(like copy and paste) they are on the same memory
       this.tail.next = newNode;
       this.tail = newNode;
     }
     this.length++;
     return this;
-  }
+  };
+
+  //removing item in the end of the linkedlist
+  //and return the item that we removed
+  //first edge case is head and tails are null
+  //other edge case is we have 1
+  pop = () => {
+    if (!this.head) return undefined;
+
+    //this will determine the remaining node before the node that will be removed
+    let pre = this.head;
+    //this node will be removed
+    let temp = this.head;
+    //iterate
+    while (temp.next /*determines the null*/) {
+      pre = temp; //pointer
+      temp = temp.next; //moves the temp to the next while it is not null
+    }
+    this.tail = pre; //set the node of tail to the node before the item to be removed
+    this.tail.next = null; //
+    this.length--; //decrement
+
+    //when item is only 1
+    if (this.length === 0) {
+      this.head = null;
+      this.tail = null;
+    }
+
+    return temp;
+  };
+
+  //insert on the first item of value
+  //create a node
+  //check again if nulls of heads and tails
+  unshift = (value) => {
+    const newNode = new Node(value);
+    if (!this.head /*edge case*/) {
+      this.head = newNode;
+      this.tail = newNode;
+    } else {
+      //this changes the this.head.next for it is also its pointer
+      //pointers are not the same file(like copy and paste) they are on the same memory
+      newNode.next = this.head;
+      this.head = newNode;
+    }
+
+    this.length++;
+    return this;
+  };
+
   ///END
   addingInEndLinkedList = () => {
     //in adding on the last item in a linkedlist on tail the value will always seek for the next with null
