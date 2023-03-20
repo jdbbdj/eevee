@@ -7,10 +7,10 @@ export class Node {
   //next:null
   //}
 
-  value: any;
+  value: Number;
   next: any;
   constructor(value) {
-    this.value = value;
+    this.value = Number(value);
     this.next = null;
   }
 }
@@ -205,9 +205,19 @@ export default class LinkedList {
     //O[n] is the representation
   };
 
-  findingByIndex = () => {
+  findingByIndex = (index) => {
     //starts with the head
     //checks each time and reiterates
     //O[n] is the representation
+
+    if (index < 0 || index >= this.length) {
+      return undefined;
+    }
+
+    let temp = this.head;
+    for (let i = 0; i < index; i++) {
+      temp = temp.next;
+    }
+    return temp;
   };
 }

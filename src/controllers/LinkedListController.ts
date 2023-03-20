@@ -35,3 +35,11 @@ export const shift = (req: Request, res: Response) => {
   newLinkedList.shift();
   res.send(newLinkedList);
 };
+
+export const get = (req: Request, res: Response) => {
+  let newLinkedList = new LinkedList(0);
+  newLinkedList.push(1);
+  newLinkedList.push(2);
+  newLinkedList.push(3);
+  res.send(newLinkedList.findingByIndex(req.query.num2));
+};
