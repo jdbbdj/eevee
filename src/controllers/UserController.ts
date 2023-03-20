@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import User from "../classes/index";
+import User from "../resources/classes/index";
 
 export const instantiate = (req: Request, res: Response) => {
   res.send(new User("James"));
