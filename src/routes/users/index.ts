@@ -1,13 +1,13 @@
 import express, { Request, Response, NextFunction, Router } from "express";
 import {
-  getComments,
+  instantiate,
   getParamsID,
   getParamsQueryNameID,
   getQueryNameID,
-} from "../../controllers/CommentsController";
+} from "../../controllers/UserController";
 const router: Router = express.Router();
 
-router.get("/", getComments);
+router.get("/", instantiate);
 
 router.put("/:id", getParamsID);
 

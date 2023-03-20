@@ -1,8 +1,12 @@
 import { Request, Response } from "express";
+import User from "../classes/index";
 
-export const getComments = (req: Request, res: Response) => {
-  console.log(req.body);
-  res.send("THIS IS RIDICULOUS");
+export const instantiate = (req: Request, res: Response) => {
+  res.send(new User("James"));
+
+  // new User("string")
+  //returns this.props = "string"
+  //for example the props you'll be returning on constructor is this.name it will have name:"James"
 };
 
 export const getParamsID = (req: Request, res: Response) => {
