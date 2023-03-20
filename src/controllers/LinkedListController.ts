@@ -45,9 +45,19 @@ export const get = (req: Request, res: Response) => {
 };
 
 export const set = (req: Request, res: Response) => {
-  let newLinkedList = new LinkedList(0);
-  newLinkedList.push(1);
-  newLinkedList.push(2);
+  let newLinkedList = new LinkedList(11);
   newLinkedList.push(3);
-  res.send(newLinkedList.changeValueByIndex(2, req.query.num2));
+  newLinkedList.push(23);
+  newLinkedList.push(7);
+  newLinkedList.changeValueByIndex(req.query.num1, req.query.num2);
+  res.send(newLinkedList);
+};
+
+export const insert = (req: Request, res: Response) => {
+  let newLinkedList = new LinkedList(11);
+  newLinkedList.push(3);
+  newLinkedList.push(23);
+  newLinkedList.push(7);
+  newLinkedList.changeValueByIndex(req.query.num1, req.query.num2);
+  res.send(newLinkedList);
 };

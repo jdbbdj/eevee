@@ -7,6 +7,7 @@ import {
   shift,
   get,
   set,
+  insert,
 } from "../../controllers/LinkedListController";
 const router: Router = express.Router();
 
@@ -21,5 +22,6 @@ router.get("/shift/", shift);
 //getByIndex
 router.get("/get/", get);
 router.get("/set/", set);
-
+//middle
+router.get("/insert/", insert);
 export default router;
