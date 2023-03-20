@@ -43,3 +43,11 @@ export const get = (req: Request, res: Response) => {
   newLinkedList.push(3);
   res.send(newLinkedList.findingByIndex(req.query.num2));
 };
+
+export const set = (req: Request, res: Response) => {
+  let newLinkedList = new LinkedList(0);
+  newLinkedList.push(1);
+  newLinkedList.push(2);
+  newLinkedList.push(3);
+  res.send(newLinkedList.changeValueByIndex(2, req.query.num2));
+};

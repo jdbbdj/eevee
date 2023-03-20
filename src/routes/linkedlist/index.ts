@@ -6,6 +6,7 @@ import {
   unshift,
   shift,
   get,
+  set,
 } from "../../controllers/LinkedListController";
 const router: Router = express.Router();
 
@@ -19,5 +20,6 @@ router.get("/unshift/", unshift);
 router.get("/shift/", shift);
 //getByIndex
 router.get("/get/", get);
+router.get("/set/", set);
 
 export default router;

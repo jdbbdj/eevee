@@ -220,4 +220,20 @@ export default class LinkedList {
     }
     return temp;
   };
+
+  changeValueByIndex = (index, value) => {
+    //starts with the head
+    //checks each time and reiterates
+    //O[n] is the representation
+
+    let temp = this.findingByIndex(index);
+    if (temp) {
+      temp.value = Number(value);
+      console.log(temp);
+      return true; //stops the code
+    }
+
+    console.log(temp);
+    return false;
+  };
 }
