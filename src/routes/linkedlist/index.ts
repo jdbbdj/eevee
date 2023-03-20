@@ -4,6 +4,7 @@ import {
   pop,
   push,
   unshift,
+  shift,
 } from "../../controllers/LinkedListController";
 const router: Router = express.Router();
 
@@ -13,4 +14,5 @@ router.get("/push/", push);
 
 router.get("/pop/", pop);
 router.get("/unshift/", unshift);
+router.get("/shift/", shift);
 export default router;

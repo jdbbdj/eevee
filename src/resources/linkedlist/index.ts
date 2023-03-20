@@ -139,6 +139,26 @@ export default class LinkedList {
     return this;
   };
 
+  //remove the first item, move the head to the next node
+  //create a node
+  //check again if nulls of heads and tails
+  shift = () => {
+    if (!this.head) return undefined;
+
+    //this node will be removed
+    let temp = this.head;
+    //move the head to the next item
+    this.head = this.head.next;
+    temp.next = null;
+
+    this.length--;
+    //when item is only 1
+    if (this.length === 0) {
+      this.tail = null;
+    }
+    return temp;
+  };
+
   ///END
   addingInEndLinkedList = () => {
     //in adding on the last item in a linkedlist on tail the value will always seek for the next with null

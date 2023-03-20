@@ -27,3 +27,11 @@ export const unshift = (req: Request, res: Response) => {
   newLinkedList.unshift(10);
   res.send(newLinkedList);
 };
+
+export const shift = (req: Request, res: Response) => {
+  let newLinkedList = new LinkedList(req.query.num1);
+  newLinkedList.push(req.query.num2);
+  newLinkedList.unshift(10);
+  newLinkedList.shift();
+  res.send(newLinkedList);
+};
