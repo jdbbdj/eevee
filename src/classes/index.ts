@@ -6,4 +6,12 @@ export default class User {
   constructor(name) {
     this.name = name;
   }
+
+  getUser() {
+    return this.name;
+  }
+
+  setName(name) {
+    this.name = name;
+  }
 }

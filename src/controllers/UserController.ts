@@ -9,30 +9,17 @@ export const instantiate = (req: Request, res: Response) => {
   //for example the props you'll be returning on constructor is this.name it will have name:"James"
 };
 
-export const getParamsID = (req: Request, res: Response) => {
-  res.send(req.params.id);
+//represents get it calls the this property that is being returned on the function
+export const getter = (req: Request, res: Response) => {
+  let newName = new User("JckPot");
+  let handleName = newName.getUser();
+  console.log("GETTER");
+  res.send(handleName);
 };
 
-export const getQueryNameID = (req: Request, res: Response) => {
+export const setter = (req: Request, res: Response) => {
+  let newName = new User("James");
+  newName.setName(req.query.name);
   console.log("HERE");
-  res.send(
-    "ID and Name of the client::" +
-      "id" +
-      req.query.id +
-      "name: " +
-      req.query.name
-  );
-};
-
-export const getParamsQueryNameID = (req: Request, res: Response) => {
-  console.log("HERE2");
-  res.send(
-    "ID and Name of the client::" +
-      "id" +
-      req.query.id +
-      "name: " +
-      req.query.name +
-      "params:" +
-      req.params.id
-  );
+  res.send(newName);
 };
