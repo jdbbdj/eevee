@@ -16,3 +16,16 @@ Course is seperated both data structures and algorithms
 It seem hard and that is because it is hard
 Have a pen and paper and trace the execution code with sample input
 Code along with the author and do not rush through the video
+
+# What is an algorithm?
+
+- An algorithm is a set of ***well-defined*** instructions to ***solve*** a particular problem
+
+### Recipe Analogy
+
+<img width="569" alt="image" src="https://github.com/jdbbdj/eevee/assets/75722677/ef0f56e3-acbb-4f96-afb9-e4f4f31e6efe">
+
+<img width="477" alt="image" src="https://github.com/jdbbdj/eevee/assets/75722677/9b43797e-a060-4552-9a50-2c54fd2c83b2">
+
+
+
