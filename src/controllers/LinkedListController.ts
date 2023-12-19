@@ -1,21 +1,26 @@
 import { Request, Response } from "express";
-import LinkedList from "../resources/LinkedList/index";
+import LinkedList from "../resources/linkedlist";
 
 export const instantiate = (req: Request, res: Response) => {
-  let newLinkedList = new LinkedList(7);
+  //user sets the initial value for the linkedlist
+  //this uses param /linked/init/:num1
+  console.log("A");
+  let newLinkedList = new LinkedList(req.params.num1);
   res.send(newLinkedList);
 };
 
 export const push = (req: Request, res: Response) => {
+  //this uses query value from the user
+  console.log("HERE2");
   let newLinkedList = new LinkedList(req.query.num1);
   newLinkedList.push(req.query.num2);
   res.send(newLinkedList);
-  console.log("HERE");
 };
 
 export const pop = (req: Request, res: Response) => {
   let newLinkedList = new LinkedList(req.query.num1);
   newLinkedList.push(req.query.num2);
+  newLinkedList.push(req.query.num1);
   newLinkedList.pop();
   res.send(newLinkedList);
 };

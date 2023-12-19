@@ -11,7 +11,7 @@ import {
 } from "../../controllers/LinkedListController";
 const router: Router = express.Router();
 
-router.get("/", instantiate);
+router.get("/init/:num1", instantiate);
 
 //end
 router.get("/push/", push);
