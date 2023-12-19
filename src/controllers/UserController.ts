@@ -11,7 +11,8 @@ export const instantiate = (req: Request, res: Response) => {
 
 //represents get it calls the this property that is being returned on the function
 export const getter = (req: Request, res: Response) => {
-  let newName = new User("JckPot");
+  let newName = new User(req.params.name);
+  //getUser functions just return the name being set
   let handleName = newName.getUser();
   console.log("GETTER");
   res.send(handleName);
@@ -19,6 +20,7 @@ export const getter = (req: Request, res: Response) => {
 
 export const setter = (req: Request, res: Response) => {
   let newName = new User("James");
+  //setName overwrites the stated name on the User instantiates
   newName.setName(req.query.name);
   console.log("HERE");
   res.send(newName);
