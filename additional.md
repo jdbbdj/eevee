@@ -27,5 +27,21 @@ Code along with the author and do not rush through the video
 
 <img width="477" alt="image" src="https://github.com/jdbbdj/eevee/assets/75722677/9b43797e-a060-4552-9a50-2c54fd2c83b2">
 
+### Parallelism to programming
+<img width="553" alt="image" src="https://github.com/jdbbdj/eevee/assets/75722677/97b30aca-f8ef-4568-aa88-6254fd1f2b6b">
+
+### Characteristics of algorithm
+- Well defined inputs and outputs
+- Each step should be clear and unambiguous
+- Language independent
+
+### Why algorithms?
+
+As a developer, you're going to come across problems that you need to resolve. Learning algorithms translates to learning different techniques to efficiently solve those problems.
+
+One problem can be solved in many ways using different algorithms. Every algorithm comes with its own tradeoffs when it comes to performance.
+
+
+
 
 
