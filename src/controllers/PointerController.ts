@@ -7,12 +7,14 @@ export const instantiate = (req: Request, res: Response) => {
 
 export const notUsingPointers = (req: Request, res: Response) => {
   let handlePointer = new Pointers();
+  //this points only to the variable
   let newNums = handlePointer.notUsingPointer(req.params.num);
   res.send(newNums);
 };
 
 export const usingPointer = (req: Request, res: Response) => {
   let handlePointer = new Pointers();
+  //this points to the object form of the value
   let newNums = handlePointer.usingPointer(req.params.num);
   res.send(newNums);
 };

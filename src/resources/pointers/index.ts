@@ -45,7 +45,9 @@ export default class Pointers {
   }
 
   reversePointer() {
+    //obj2 listens to obj3
     this.obj2 = this.obj3;
+    //obj 1 listens to obj2
     this.obj1 = this.obj2;
 
     return [this.obj1, this.obj2, this.obj3];
