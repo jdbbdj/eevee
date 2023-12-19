@@ -41,6 +41,17 @@ As a developer, you're going to come across problems that you need to resolve. L
 
 One problem can be solved in many ways using different algorithms. Every algorithm comes with its own tradeoffs when it comes to performance.
 
+### Algorithm analysis
+
+There are multiple ways to solve one problem. For example there are multiple algorithms to sort a list of numbers.
+
+How do we analyse which one of them is the most efficient algorithm?
+
+Generally, when we talk about performance, we use an absolute measure.
+If I can run 100 meters in 12 seconds, I am faster than someone who takes 15 seconds.
+
+
+
 
 
 
