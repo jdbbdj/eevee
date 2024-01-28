@@ -13,13 +13,14 @@ Course is seperated both data structures and algorithms
 - Misc. algorithms and problem solving
 
 ## Author's Take
+
 It seem hard and that is because it is hard
 Have a pen and paper and trace the execution code with sample input
 Code along with the author and do not rush through the video
 
 # What is an algorithm?
 
-- An algorithm is a set of ***well-defined*** instructions to ***solve*** a particular problem
+- An algorithm is a set of **_well-defined_** instructions to **_solve_** a particular problem
 
 ### Recipe Analogy
 
@@ -28,9 +29,11 @@ Code along with the author and do not rush through the video
 <img width="477" alt="image" src="https://github.com/jdbbdj/eevee/assets/75722677/9b43797e-a060-4552-9a50-2c54fd2c83b2">
 
 ### Parallelism to programming
+
 <img width="553" alt="image" src="https://github.com/jdbbdj/eevee/assets/75722677/97b30aca-f8ef-4568-aa88-6254fd1f2b6b">
 
 ### Characteristics of algorithm
+
 - Well defined inputs and outputs
 - Each step should be clear and unambiguous
 - Language independent
@@ -57,10 +60,10 @@ If I can run 100 meters in 12 seconds, I am faster than someone who takes 15 sec
 - Other programs running at the same time
 - Quality of operating system
 
-### We evaluate the performance of an algorithm ***in terms of its input size***
+### We evaluate the performance of an algorithm **_in terms of its input size_**
 
-***Time Complexity*** - Amount of timetaken by an algorithm to run, as a function of input size
-***Space Complexity*** - Amount of memory taken by an algorithm to run, as a function of input size
+**_Time Complexity_** - Amount of timetaken by an algorithm to run, as a function of input size
+**_Space Complexity_** - Amount of memory taken by an algorithm to run, as a function of input size
 
 By evaluating aginst the input size, the analysis is not only machine independent but the comparison is also more appropriate.
 
@@ -71,15 +74,64 @@ If your app needs to be very quick and has plenty of memory to work with, you do
 If you have very little memory to work with, you should pick a solution that is relatively slower but needs less space.
 
 ### How to represent complexity?
+
 Asymptotic notations
+
 - Mathematical tools to represent time and space complexity
-  1. ***Big-O Notation - Worst case***
+  1. **_Big-O Notation - Worst case_**
   2. Omega Notation - Best Case
   3. Theta Notation - Average case
 
+### BIG O Notation
 
+function summation (n){
+let sum = 0;
+for (let i=1; i<= n; i++>){
+sum += i;
+}
+return sum;
+}
 
+Example:
 
+summation(4) = 10
 
+1+2+3+4 = 10
 
+Count the number of times a statement executes based on the input size.
 
+LINE 88 -> executes only once
+LINE 90 -> executes 4 times
+LINE 92 -> executes 1
+
+then this is O(n+2) for the middle part of the code will be the one that will
+change based on the input
+
+This is called as **_TIME COMPLEXITY_** which is determined by its input.
+
+### Big O
+
+- Focuses on the bigger picture without getting caught up in the minute details
+  Time Complexity O(n) - **_Linear_**
+
+### Big-O Calculation
+
+function summation(n){
+return (n\*(n+1))/2
+}
+
+this **_loop_** could be still considered as O(n)
+
+function multiply(n){
+for(i=1;i<=n;i++>){
+for(j=1;j<=i;j++>){
+//some code
+}
+}
+}
+
+Time Complexity(n^2) - Quadratic
+
+- For this item is mainly depends on the loop inside the loop, before the first loop finishes
+  it needs to reiterate it depending on the code inside the second loop
+- This is very avoidable situation when coding, unless it is necessary and the input is very low in count
