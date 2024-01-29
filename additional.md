@@ -135,3 +135,33 @@ Time Complexity(n^2) - Quadratic
 - For this item is mainly depends on the loop inside the loop, before the first loop finishes
   it needs to reiterate it depending on the code inside the second loop
 - This is very avoidable situation when coding, unless it is necessary and the input is very low in count
+
+### Object
+
+An object is a collection of key value pairs
+
+Insert - O(1)
+Remove - O(1)
+Access - O(1)
+Search - O(n)
+Object.keys() - O(n)
+Object.values() - O(n)
+Object.entries() - O(n)
+
+const person = {
+firstName: 'Bruce',
+lastName: 'Wayne
+}
+
+### Array
+
+An array is an ordered collection of values
+const odd = [1,3,5,7,9]
+
+Insert/Remove at end - O(1)
+Insert/Remove at beginning - O(n)
+Access - O(1)
+Search - O(n)
+Push/Pop - O(1)
+Shift/Unshift/Concat/Slice/Splice - O(n)
+forEach/map/filter/reduce - O(n)
