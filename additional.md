@@ -62,6 +62,12 @@ If I can run 100 meters in 12 seconds, I am faster than someone who takes 15 sec
 
 ### We evaluate the performance of an algorithm **_in terms of its input size_**
 
+ig O Notation is a metric for determining an algorithm's efficiency. Put simply, it gives an estimate of how long it takes your code to run on different sets of inputs. You can also see it as a way to measure how effectively your code scales as your input size increases. This Big O Notation cheat sheet is here to make these concepts easier for you.
+
+Now, time complexity and space complexity are two specific techniques to measure efficiency.
+
+A function's time complexity measures how long it takes to execute in terms of computational steps. The space complexity of a function measures the amount of memory your code uses.
+
 **_Time Complexity_** - Amount of timetaken by an algorithm to run, as a function of input size
 **_Space Complexity_** - Amount of memory taken by an algorithm to run, as a function of input size
 
