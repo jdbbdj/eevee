@@ -14,4 +14,13 @@ export default class ArraysSchema {
   setName(name) {
     this.name = name;
   }
+
+  arrayFilter(items) {
+    let data = [];
+    items.filter((item) => {
+      data.push(item);
+    });
+
+    return data;
+  }
 }

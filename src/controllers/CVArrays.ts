@@ -1,6 +1,6 @@
 import { Request, Response } from "express";
 import ArraysSchema from "../resources/codevolution/array";
-
+import { items } from "../utils/arrayData";
 export const instantiate = (req: Request, res: Response) => {
   res.send(new ArraysSchema("James"));
 
@@ -24,4 +24,11 @@ export const setter = (req: Request, res: Response) => {
   newName.setName(req.query.name);
   console.log("HERE");
   res.send(newName);
+};
+
+export const filterItems = (req: Request, res: Response) => {
+  let schemaInitiator = new ArraysSchema("James");
+
+  const filteredData = schemaInitiator.arrayFilter(items);
+  res.send(filteredData);
 };
