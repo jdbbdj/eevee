@@ -10,7 +10,7 @@ app.use("/users", userRouter);
 app.use("/pointers", pointerRouter);
 app.use("/linked", linkedListRouter);
 
-app.use("/arrays", linkedListRouter);
+app.use("/arrays", arrayListRouter);
 
 app.listen(5000, () => {
   console.log("Server Running");
