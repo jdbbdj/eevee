@@ -7,14 +7,6 @@ export default class ArraysSchema {
     this.name = name;
   }
 
-  getUser() {
-    return this.name;
-  }
-
-  setName(name) {
-    this.name = name;
-  }
-
   arrayFilter(items) {
     let data = [];
     items.filter((item) => {
@@ -22,5 +14,17 @@ export default class ArraysSchema {
     });
 
     return data;
+  }
+
+  accessArrayAt(items, index) {
+    return items[index];
+  }
+
+  arrayLength(items) {
+    return items.length;
+  }
+
+  arrayString(items) {
+    return items.toString();
   }
 }
