@@ -15,3 +15,13 @@ export const arrayString = (req: Request, res: Response) => {
   const returnString = schemaInitiator.arrayString(oneDimensionArray);
   res.send(returnString);
 };
+
+export const accessArrayAt = (req: Request, res: Response) => {
+  let schemaInitiator = new ArraysSchema("James");
+
+  const returnString = schemaInitiator.accessArrayAt(
+    items,
+    req.body.arrayIndex
+  );
+  res.send(returnString);
+};
