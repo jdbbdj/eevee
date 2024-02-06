@@ -25,3 +25,10 @@ export const accessArrayAt = (req: Request, res: Response) => {
   );
   res.send(returnString);
 };
+
+export const arrayLength = (req: Request, res: Response) => {
+  let schemaInitiator = new ArraysSchema("James");
+  const returnString = schemaInitiator.arrayLength(oneDimensionArray);
+  //you can't return numbers on res.send() always convert it to string before sending it back
+  res.send(returnString);
+};

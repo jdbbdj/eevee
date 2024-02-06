@@ -21,7 +21,8 @@ export default class ArraysSchema {
   }
 
   arrayLength(items) {
-    return items.length;
+    const lengthCheck = items.length;
+    return lengthCheck + "";
   }
 
   arrayString(items) {
