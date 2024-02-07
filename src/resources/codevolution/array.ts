@@ -28,4 +28,8 @@ export default class ArraysSchema {
   arrayString(items) {
     return items.toString();
   }
+
+  joinArray(items, joiner) {
+    return items.join(joiner);
+  }
 }
