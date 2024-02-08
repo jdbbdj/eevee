@@ -32,4 +32,13 @@ export default class ArraysSchema {
   joinArray(items, joiner) {
     return items.join(joiner);
   }
+
+  popArray(items, type) {
+    if (type === "value") {
+      items.pop();
+      return items;
+    } else {
+      return items.pop();
+    }
+  }
 }

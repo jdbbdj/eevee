@@ -42,3 +42,13 @@ export const joinArray = (req: Request, res: Response) => {
   //you can't return numbers on res.send() always convert it to string before sending it back
   res.send(returnString);
 };
+
+export const popArray = (req: Request, res: Response) => {
+  let schemaInitiator = new ArraysSchema("James");
+  const returnString = schemaInitiator.popArray(
+    oneDimensionArray,
+    req.body.typeHandler
+  );
+  //you can't return numbers on res.send() always convert it to string before sending it back
+  res.send(returnString);
+};
