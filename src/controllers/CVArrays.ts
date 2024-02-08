@@ -52,3 +52,14 @@ export const popArray = (req: Request, res: Response) => {
   //you can't return numbers on res.send() always convert it to string before sending it back
   res.send(returnString);
 };
+
+export const pushArray = (req: Request, res: Response) => {
+  let schemaInitiator = new ArraysSchema("James");
+  const returnString = schemaInitiator.pushArray(
+    oneDimensionArray,
+    req.body.typeHandler,
+    req.body.pushValue
+  );
+  //you can't return numbers on res.send() always convert it to string before sending it back
+  res.send(returnString);
+};

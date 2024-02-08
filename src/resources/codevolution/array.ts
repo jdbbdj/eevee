@@ -41,4 +41,13 @@ export default class ArraysSchema {
       return items.pop();
     }
   }
+
+  pushArray(items, type, pushValue) {
+    if (type === "value") {
+      items.push(pushValue);
+      return items;
+    } else {
+      return items;
+    }
+  }
 }
