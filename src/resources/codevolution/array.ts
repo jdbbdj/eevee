@@ -33,6 +33,7 @@ export default class ArraysSchema {
     return items.join(joiner);
   }
 
+  // last item
   popArray(items, type) {
     if (type === "value") {
       items.pop();
@@ -42,9 +43,29 @@ export default class ArraysSchema {
     }
   }
 
+  // last item
   pushArray(items, type, pushValue) {
     if (type === "value") {
       items.push(pushValue);
+      return items;
+    } else {
+      return items;
+    }
+  }
+
+  //first item
+  shiftArray(items, type) {
+    if (type === "value") {
+      items.shift();
+      return items;
+    } else {
+      return items;
+    }
+  }
+
+  unshiftArray(items, type, unshiftValue) {
+    if (type === "value") {
+      items.unshift(unshiftValue);
       return items;
     } else {
       return items;

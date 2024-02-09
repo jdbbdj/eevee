@@ -7,6 +7,8 @@ import {
   joinArray,
   popArray,
   pushArray,
+  shiftArray,
+  unshiftArray,
 } from "../../controllers/CVArrays";
 const router: Router = express.Router();
 
@@ -17,4 +19,6 @@ router.get("/arrayLength", arrayLength);
 router.get("/joinArray", joinArray);
 router.get("/popArray", popArray);
 router.get("/pushArray", pushArray);
+router.get("/shiftArray", shiftArray);
+router.get("/unshiftArray", unshiftArray);
 export default router;
