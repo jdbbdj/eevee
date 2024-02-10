@@ -84,3 +84,14 @@ export const unshiftArray = (req: Request, res: Response) => {
   //you can't return numbers on res.send() always convert it to string before sending it back
   res.send(returnString);
 };
+
+export const deleteArray = (req: Request, res: Response) => {
+  let schemaInitiator = new ArraysSchema("James");
+  const returnString = schemaInitiator.deleteArray(
+    oneDimensionArray,
+    req.body.typeHandler,
+    req.body.deleteIndex
+  );
+  //you can't return numbers on res.send() always convert it to string before sending it back
+  res.send(returnString);
+};

@@ -71,4 +71,14 @@ export default class ArraysSchema {
       return items;
     }
   }
+
+  //delete: leave undefined || null value on an array index
+  deleteArray(items, type, deleteIndex) {
+    if (type === "value") {
+      delete items[deleteIndex];
+      return items;
+    } else {
+      return items;
+    }
+  }
 }
