@@ -12,6 +12,7 @@ import {
   deleteArray,
   concatArray,
   copyWithinArray,
+  flatArray,
 } from "../../controllers/CVArrays";
 const router: Router = express.Router();
 
@@ -27,4 +28,5 @@ router.get("/unshiftArray", unshiftArray);
 router.get("/deleteArray", deleteArray);
 router.get("/concatArray", concatArray);
 router.get("/copyWithinArray", copyWithinArray);
+router.get("/flatArray", flatArray);
 export default router;

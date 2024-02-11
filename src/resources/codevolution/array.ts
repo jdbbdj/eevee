@@ -107,4 +107,9 @@ export default class ArraysSchema {
       return items.copyWithin(overWrittenItem, itemCoppiedStart, itemCopiedEnd);
     }
   }
+
+  //flattens the array
+  flatArray(items) {
+    return items.flat();
+  }
 }

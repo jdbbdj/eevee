@@ -1,6 +1,6 @@
 import { Request, Response } from "express";
 import ArraysSchema from "../resources/codevolution/array";
-import { items, oneDimensionArray } from "../utils/arrayData";
+import { complexArray, items, oneDimensionArray } from "../utils/arrayData";
 
 export const filterItems = (req: Request, res: Response) => {
   let schemaInitiator = new ArraysSchema("James");
@@ -116,6 +116,13 @@ export const copyWithinArray = (req: Request, res: Response) => {
     req.body.itemCoppiedStart,
     req.body.itemCopiedEnd
   );
+  //you can't return numbers on res.send() always convert it to string before sending it back
+  res.send(returnString);
+};
+
+export const flatArray = (req: Request, res: Response) => {
+  let schemaInitiator = new ArraysSchema("James");
+  const returnString = schemaInitiator.flatArray(complexArray);
   //you can't return numbers on res.send() always convert it to string before sending it back
   res.send(returnString);
 };
