@@ -106,3 +106,16 @@ export const concatArray = (req: Request, res: Response) => {
   //you can't return numbers on res.send() always convert it to string before sending it back
   res.send(returnString);
 };
+
+export const copyWithinArray = (req: Request, res: Response) => {
+  let schemaInitiator = new ArraysSchema("James");
+  const returnString = schemaInitiator.copyWithinArray(
+    oneDimensionArray,
+    req.body.typeHandler,
+    req.body.overWrittenItem,
+    req.body.itemCoppiedStart,
+    req.body.itemCopiedEnd
+  );
+  //you can't return numbers on res.send() always convert it to string before sending it back
+  res.send(returnString);
+};

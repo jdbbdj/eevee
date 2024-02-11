@@ -4,4 +4,4 @@ export const items = [
   { name: "Bike", price: 15 },
 ];
 
-export const oneDimensionArray = ["siopao", "siomai", "burger", "asin"];
+export const oneDimensionArray = ["1", "2", "3", "4", "5", "6"];

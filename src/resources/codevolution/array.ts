@@ -90,4 +90,21 @@ export default class ArraysSchema {
       return items.concat(addedArray, items);
     }
   }
+
+  //copy within: copy an item from array to another item(overwrites)
+  copyWithinArray(
+    items,
+    type,
+    overWrittenItem,
+    itemCoppiedStart,
+    itemCopiedEnd
+  ) {
+    if (type === "simple") {
+      //pushes the remaining item
+      return items.copyWithin(overWrittenItem, itemCoppiedStart);
+    } else {
+      //overwrites the items
+      return items.copyWithin(overWrittenItem, itemCoppiedStart, itemCopiedEnd);
+    }
+  }
 }
