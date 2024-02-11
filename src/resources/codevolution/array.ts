@@ -81,4 +81,13 @@ export default class ArraysSchema {
       return items;
     }
   }
+
+  //concat: merge two arrays
+  concatArray(items, type, addedArray) {
+    if (type === "simple") {
+      return items.concat(addedArray);
+    } else {
+      return items.concat(addedArray, items);
+    }
+  }
 }
