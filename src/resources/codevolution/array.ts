@@ -112,4 +112,15 @@ export default class ArraysSchema {
   flatArray(items) {
     return items.flat();
   }
+
+  //splice: adds new item to an array
+  spliceArray(items, type, indexPosition, numberOfItems, appendedArray) {
+    if (type === "simple") {
+      //pushes the remaining item
+      appendedArray.map((item) => {
+        items.splice(indexPosition, numberOfItems, item);
+      });
+      return items;
+    }
+  }
 }
