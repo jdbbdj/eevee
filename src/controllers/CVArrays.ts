@@ -139,3 +139,16 @@ export const spliceArray = (req: Request, res: Response) => {
   //you can't return numbers on res.send() always convert it to string before sending it back
   res.send(returnString);
 };
+
+export const toSpliceArray = (req: Request, res: Response) => {
+  let schemaInitiator = new ArraysSchema("James");
+  const returnString = schemaInitiator.toSpliceArray(
+    oneDimensionArray,
+    req.body.typeHandler,
+    req.body.indexPosition,
+    req.body.numberOfItems,
+    req.body.appendedArray
+  );
+  //you can't return numbers on res.send() always convert it to string before sending it back
+  res.send(returnString);
+};

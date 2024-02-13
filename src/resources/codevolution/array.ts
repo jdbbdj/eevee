@@ -123,4 +123,15 @@ export default class ArraysSchema {
       return items;
     }
   }
+
+  //toSpliced: the same as splice but creates a new array
+  toSpliceArray(items, type, indexPosition, numberOfItems, appendedArray) {
+    if (type === "simple") {
+      //pushes the remaining item
+      appendedArray.map((item) => {
+        items.toSplice(indexPosition, numberOfItems, item);
+      });
+      return items;
+    }
+  }
 }

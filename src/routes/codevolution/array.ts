@@ -14,6 +14,7 @@ import {
   copyWithinArray,
   flatArray,
   spliceArray,
+  toSpliceArray,
 } from "../../controllers/CVArrays";
 const router: Router = express.Router();
 
@@ -31,4 +32,5 @@ router.get("/concatArray", concatArray);
 router.get("/copyWithinArray", copyWithinArray);
 router.get("/flatArray", flatArray);
 router.get("/spliceArray", spliceArray);
+router.get("/toSpliceArray", toSpliceArray);
 export default router;
