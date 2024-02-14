@@ -134,4 +134,9 @@ export default class ArraysSchema {
       return items;
     }
   }
+
+  //*********************ARRAY SEARCH ********************************/
+  indexOfArray(data, item, start) {
+    return data.indexOf(item, start);
+  }
 }
