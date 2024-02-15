@@ -139,4 +139,8 @@ export default class ArraysSchema {
   indexOfArray(data, item, start) {
     return data.indexOf(item, start);
   }
+
+  lastIndexOfArray(data, searchItem) {
+    return data.lastIndexOf(data, searchItem);
+  }
 }
