@@ -173,3 +173,13 @@ export const lastIndexOfArray = (req: Request, res: Response) => {
   //you can't return numbers on res.send() always convert it to string before sending it back
   res.send(returnString);
 };
+
+export const includesArray = (req: Request, res: Response) => {
+  let schemaInitiator = new ArraysSchema("James");
+  const returnString = schemaInitiator.includesArray(
+    oneDimensionArray,
+    req.body.searchItem
+  );
+  //you can't return numbers on res.send() always convert it to string before sending it back
+  res.send(returnString);
+};

@@ -17,6 +17,7 @@ import {
   toSpliceArray,
   indexOfArray,
   lastIndexOfArray,
+  includesArray,
 } from "../../controllers/CVArrays";
 const router: Router = express.Router();
 
@@ -39,4 +40,5 @@ router.get("/toSpliceArray", toSpliceArray);
 //search
 router.get("/indexOfArray", indexOfArray);
 router.get("/lastIndexOfArray", lastIndexOfArray);
+router.get("/includesArray", includesArray);
 export default router;

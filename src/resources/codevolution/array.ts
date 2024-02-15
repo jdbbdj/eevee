@@ -143,4 +143,8 @@ export default class ArraysSchema {
   lastIndexOfArray(data, searchItem) {
     return data.lastIndexOf(data, searchItem);
   }
+
+  includesArray(data, searchItem) {
+    return data.includes(searchItem);
+  }
 }
