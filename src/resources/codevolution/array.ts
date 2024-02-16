@@ -147,4 +147,8 @@ export default class ArraysSchema {
   includesArray(data, searchItem) {
     return data.includes(searchItem);
   }
+
+  findArray(data, searchItem) {
+    return data.find(searchItem);
+  }
 }
