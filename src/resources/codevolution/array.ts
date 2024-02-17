@@ -149,6 +149,9 @@ export default class ArraysSchema {
   }
 
   findArray(data, searchItem) {
-    return data.find(searchItem);
+    const myFunction = (value, index, array) => {
+      return value === searchItem;
+    };
+    return data.find(myFunction);
   }
 }
