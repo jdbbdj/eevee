@@ -154,4 +154,8 @@ export default class ArraysSchema {
     };
     return data.find(myFunction);
   }
+
+  sortArray(data) {
+    return data.sort();
+  }
 }

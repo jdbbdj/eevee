@@ -1,6 +1,11 @@
 import { Request, Response } from "express";
 import ArraysSchema from "../resources/codevolution/array";
-import { complexArray, items, oneDimensionArray } from "../utils/arrayData";
+import {
+  complexArray,
+  items,
+  oneDimensionArray,
+  sortToAlphabetical,
+} from "../utils/arrayData";
 
 export const filterItems = (req: Request, res: Response) => {
   let schemaInitiator = new ArraysSchema("James");
@@ -190,6 +195,14 @@ export const findArray = (req: Request, res: Response) => {
     oneDimensionArray,
     req.body.searchItem
   );
+  //you can't return numbers on res.send() always convert it to string before sending it back
+  res.send(returnString);
+};
+
+//////***************ARRAY SORT ***************************/
+export const sortArray = (req: Request, res: Response) => {
+  let schemaInitiator = new ArraysSchema("James");
+  const returnString = schemaInitiator.sortArray(sortToAlphabetical);
   //you can't return numbers on res.send() always convert it to string before sending it back
   res.send(returnString);
 };

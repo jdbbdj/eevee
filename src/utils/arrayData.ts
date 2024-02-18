@@ -6,6 +6,8 @@ export const items = [
 
 export const oneDimensionArray = ["1", "2", "3", "4", "5", "6"];
 
+export const sortToAlphabetical = ["B", "C", "D", "A", "E", "F"];
+
 export const complexArray = [
   [1, 2],
   [3, 4],
