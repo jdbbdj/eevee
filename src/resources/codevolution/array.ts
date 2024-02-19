@@ -1,3 +1,5 @@
+import { type } from "os";
+
 export default class ArraysSchema {
   name: String;
   // just add "default"
@@ -157,5 +159,14 @@ export default class ArraysSchema {
 
   sortArray(data) {
     return data.sort();
+  }
+
+  reverseArray(data, typeHandler) {
+    if (typeHandler === "normal") {
+      return data.reverse();
+    } else if (typeHandler === "descend") {
+      data.sort();
+      return data.reverse();
+    }
   }
 }
