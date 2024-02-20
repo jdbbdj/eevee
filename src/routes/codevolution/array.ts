@@ -21,6 +21,7 @@ import {
   findArray,
   sortArray,
   reverseArray,
+  toReverseSortedArray,
 } from "../../controllers/CVArrays";
 const router: Router = express.Router();
 
@@ -49,4 +50,5 @@ router.get("/findArray", findArray);
 //sort
 router.get("/sortArray", sortArray);
 router.get("/reverseArray", reverseArray);
+router.get("/toReverseSortedArray", toReverseSortedArray);
 export default router;

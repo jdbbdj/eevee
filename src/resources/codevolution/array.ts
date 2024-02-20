@@ -169,4 +169,13 @@ export default class ArraysSchema {
       return data.reverse();
     }
   }
+
+  toReverseSortedArray(data, typeHandler) {
+    if (typeHandler === "normal") {
+      return [data.toSorted(), data];
+    } else if (typeHandler === "descend") {
+      const newData = data.toSorted();
+      return [data.toReversed(), data];
+    }
+  }
 }
