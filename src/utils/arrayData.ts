@@ -13,3 +13,9 @@ export const complexArray = [
   [3, 4],
   [5, 6],
 ];
+
+export const objectArray = [
+  { type: "Volvo", year: 2016 },
+  { type: "Saab", year: 2001 },
+  { type: "BMW", year: 2010 },
+];

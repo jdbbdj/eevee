@@ -178,4 +178,10 @@ export default class ArraysSchema {
       return [data.toReversed(), data];
     }
   }
+
+  objectSortArray(data) {
+    return data.sort(function (a, b) {
+      return a.year - b.year;
+    });
+  }
 }

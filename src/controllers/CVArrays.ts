@@ -5,6 +5,7 @@ import {
   items,
   oneDimensionArray,
   sortToAlphabetical,
+  objectArray,
 } from "../utils/arrayData";
 
 export const filterItems = (req: Request, res: Response) => {
@@ -223,6 +224,13 @@ export const toReverseSortedArray = (req: Request, res: Response) => {
     sortToAlphabetical,
     req.body.typeHandler
   );
+  //you can't return numbers on res.send() always convert it to string before sending it back
+  res.send(returnString);
+};
+
+export const objectSortArray = (req: Request, res: Response) => {
+  let schemaInitiator = new ArraysSchema("James");
+  const returnString = schemaInitiator.objectSortArray(objectArray);
   //you can't return numbers on res.send() always convert it to string before sending it back
   res.send(returnString);
 };
