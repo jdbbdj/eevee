@@ -184,4 +184,10 @@ export default class ArraysSchema {
       return a.year - b.year;
     });
   }
+
+  numericSortArray(data) {
+    return data.sort(function (a, b) {
+      return a - b;
+    });
+  }
 }

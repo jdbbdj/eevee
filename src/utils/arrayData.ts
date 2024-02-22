@@ -19,3 +19,5 @@ export const objectArray = [
   { type: "Saab", year: 2001 },
   { type: "BMW", year: 2010 },
 ];
+
+export const numericArray = [40, 100, 1, 5, 25, 10];
