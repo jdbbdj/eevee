@@ -190,4 +190,10 @@ export default class ArraysSchema {
       return a - b;
     });
   }
+
+  randomnumericSortArray(data) {
+    return data.sort(function () {
+      return 0.5 - Math.random();
+    });
+  }
 }

@@ -241,3 +241,10 @@ export const numericSortArray = (req: Request, res: Response) => {
   //you can't return numbers on res.send() always convert it to string before sending it back
   res.send(returnString);
 };
+
+export const randomnumericSortArray = (req: Request, res: Response) => {
+  let schemaInitiator = new ArraysSchema("James");
+  const returnString = schemaInitiator.randomnumericSortArray(objectArray);
+  //you can't return numbers on res.send() always convert it to string before sending it back
+  res.send(returnString);
+};
