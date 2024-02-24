@@ -6,6 +6,7 @@ import {
   oneDimensionArray,
   sortToAlphabetical,
   objectArray,
+  numericArray,
 } from "../utils/arrayData";
 
 export const filterItems = (req: Request, res: Response) => {
@@ -237,14 +238,23 @@ export const objectSortArray = (req: Request, res: Response) => {
 
 export const numericSortArray = (req: Request, res: Response) => {
   let schemaInitiator = new ArraysSchema("James");
-  const returnString = schemaInitiator.numericSortArray(objectArray);
+  const returnString = schemaInitiator.numericSortArray(numericArray);
   //you can't return numbers on res.send() always convert it to string before sending it back
   res.send(returnString);
 };
 
 export const randomnumericSortArray = (req: Request, res: Response) => {
   let schemaInitiator = new ArraysSchema("James");
-  const returnString = schemaInitiator.randomnumericSortArray(objectArray);
+  const returnString = schemaInitiator.randomnumericSortArray(numericArray);
+  //you can't return numbers on res.send() always convert it to string before sending it back
+  res.send(returnString);
+};
+
+/*********************************ARRAY ITERATOR */
+
+export const forEachArray = (req: Request, res: Response) => {
+  let schemaInitiator = new ArraysSchema("James");
+  const returnString = schemaInitiator.forEachArray(numericArray);
   //you can't return numbers on res.send() always convert it to string before sending it back
   res.send(returnString);
 };

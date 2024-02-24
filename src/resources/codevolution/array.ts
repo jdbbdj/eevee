@@ -1,5 +1,5 @@
 import { type } from "os";
-
+import { functionCaller } from "../../utils/arrayData";
 export default class ArraysSchema {
   name: String;
   // just add "default"
@@ -195,5 +195,9 @@ export default class ArraysSchema {
     return data.sort(function () {
       return 0.5 - Math.random();
     });
+  }
+
+  forEachArray(data) {
+    return data.foreach(functionCaller);
   }
 }
