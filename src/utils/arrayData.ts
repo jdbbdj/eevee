@@ -23,5 +23,5 @@ export const objectArray = [
 export const numericArray = [40, 100, 1, 5, 25, 10];
 
 export const functionCaller = (value, index, array) => {
-  return value;
+  return value * 2;
 };

@@ -258,3 +258,10 @@ export const forEachArray = (req: Request, res: Response) => {
   //you can't return numbers on res.send() always convert it to string before sending it back
   res.send(returnString);
 };
+
+export const mapArray = (req: Request, res: Response) => {
+  let schemaInitiator = new ArraysSchema("James");
+  const returnString = schemaInitiator.mapArray(numericArray);
+  //you can't return numbers on res.send() always convert it to string before sending it back
+  res.send(returnString);
+};

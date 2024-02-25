@@ -200,4 +200,8 @@ export default class ArraysSchema {
   forEachArray(data) {
     return data.foreach(functionCaller);
   }
+
+  mapArray(data) {
+    return data.map(functionCaller);
+  }
 }

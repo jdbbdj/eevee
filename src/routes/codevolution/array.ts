@@ -26,6 +26,7 @@ import {
   numericSortArray,
   randomnumericSortArray,
   forEachArray,
+  mapArray,
 } from "../../controllers/CVArrays";
 const router: Router = express.Router();
 
@@ -61,4 +62,5 @@ router.get("/randomnumericSortArray", randomnumericSortArray);
 
 //iterator
 router.get("/forEachArray", forEachArray);
+router.get("/mapArray", mapArray);
 export default router;
