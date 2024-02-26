@@ -204,4 +204,9 @@ export default class ArraysSchema {
   mapArray(data) {
     return data.map(functionCaller);
   }
+
+  flatMapArray(data) {
+    const newData = data.flatMap((x) => x * 2);
+    return newData;
+  }
 }

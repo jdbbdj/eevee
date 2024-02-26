@@ -265,3 +265,10 @@ export const mapArray = (req: Request, res: Response) => {
   //you can't return numbers on res.send() always convert it to string before sending it back
   res.send(returnString);
 };
+
+export const flatMapArray = (req: Request, res: Response) => {
+  let schemaInitiator = new ArraysSchema("James");
+  const returnString = schemaInitiator.flatMapArray(numericArray);
+  //you can't return numbers on res.send() always convert it to string before sending it back
+  res.send(returnString);
+};
