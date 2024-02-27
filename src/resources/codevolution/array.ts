@@ -1,5 +1,5 @@
 import { type } from "os";
-import { functionCaller } from "../../utils/arrayData";
+import { functionCaller, filterCaller } from "../../utils/arrayData";
 export default class ArraysSchema {
   name: String;
   // just add "default"
@@ -207,6 +207,11 @@ export default class ArraysSchema {
 
   flatMapArray(data) {
     const newData = data.flatMap((x) => x * 2);
+    return newData;
+  }
+
+  filterArray(data) {
+    const newData = data.filter(filterCaller);
     return newData;
   }
 }
